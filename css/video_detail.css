@@ -1,0 +1,118 @@
+body,img,p,form,div,ul,li,input,h3 {
+    margin:0;
+    padding:0;
+}
+#details-content-box{
+    margin-top:60px;
+    padding:0 10px;
+}
+.details-title-box{
+    margin:0 auto 10px auto;
+    padding: 10px;
+    background: #fff;
+
+}
+.details-title {
+    font-size:18px;
+    color: #333333;
+    font-weight: 700;
+    font-family: Microsoft YaHei;
+    line-height: 26px;
+}
+.details-title * {
+    display: inline-block;
+}
+.details-title span {
+    line-height:26px;
+}
+.details-info {
+    font-size:12px;
+    color: #8c8c8c;
+    font-family: Microsoft YaHei;
+    margin:6px 0;
+    font-weight: 400;
+}
+.details-content {
+    width: 100%;
+    font-size:17px;
+    font-family: "微软雅黑";
+    font-weight: 700;
+    overflow: hidden;
+}
+#recommend-title {
+    font-size:18px;
+    color: #333333;
+    font-weight: 700;
+    font-family: Microsoft YaHei;
+    border-bottom:1px solid #e6e6e6;
+    line-height: 38px;
+}
+#recommend-title span {
+    line-height: 26px;
+    height: 26px;
+    display:inline-block;
+    border-left:4px solid #1cbabd;
+    padding-left:5px;
+}
+.article-recommend-list li{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding:10px;
+    color:#333;
+    border-bottom:1px solid #e6e6e6;
+    border-top:1px solid #fff;
+}
+.article-recommend-list li.border-top-none{
+    border-top:none
+}
+.article-recommend-list .recommend-img-box{
+    display: table-cell;
+    position: relative;
+    height: 75px;
+    overflow: hidden;
+}
+.article-recommend-list .recommend-img-box img{
+    display:block;width: 100px;
+    height: 75px;
+    overflow: hidden;
+}
+
+.article-recommend-list .recommend-text{
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+.article-recommend-list li p{
+    font-size: 16px;
+    text-overflow: ellipsis;
+    line-height: 26px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+@media screen and (min-width:360px){
+    .article-recommend-list li p{
+        width:240px;
+    }
+}
+@media screen and (min-width:370px){
+    .article-recommend-list li p{
+        width:250px;
+    }
+}
+@media screen and (min-width:400px){
+    .article-recommend-list li p{
+        width:290px;
+    }
+}
+
+.article-recommend-list li span{
+    display:inline-block;
+    font-size:13px;
+    padding-right:5px;
+    color:#555;
+    margin-top:5px
+}

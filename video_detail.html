@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0">
+    <title></title>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/video_detail.css">
+    <!--[if lt IE 9]>
+    <script src="lib/html5shiv/html5shiv.min.js"></script>
+    <script src="lib/respond/respond.js"></script>
+    <![endif]-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="template.js"></script>
+    <style>
+        video {
+            width: 100%;
+            max-width: 100%
+        }
+    </style>
+</head>
+<body>
+<!--视频部分-->
+<div id="details-content-box">
+    <div class="details-title-box">
+    <h1 class="details-title">
+        <span>我的测试</span>
+    </h1>
+    <div class="details-info">
+        <span>2017-11-23 15:50:59.013</span>
+    </div>
+    </div>
+    <div class="details-content" style="height: 200px;width: auto">
+        <video src="iceage4.mp4" controls="controls" ></video>
+    </div>
+</div>
+<!--精品推荐-->
+<div id="recommend-title">
+    <span>精品推荐</span>
+    <ul class="article-recommend-list">
+        <a href="https://www.baidu.com/index.php?tn=78040160_63_pg&ch=2"  >
+            <li class="border-top-none">
+                <div class="recommend-img-box">
+                    <img src="11.jpg" >
+                </div>
+                <div class="recommend-text">
+                    <p>喝珍珠奶茶卡吸管竟是喝到水银电池了</p>
+                </div>
+            </li>
+        </a>
+        <!--<a href="https://www.baidu.com/index.php?tn=78040160_63_pg&ch=2"  >-->
+            <!--<li class="border-top-none">-->
+                <!--<div class="recommend-img-box"><img src="11.jpg" ></div>-->
+                <!--<div class="recommend-text">-->
+                    <!--<p>喝珍珠奶茶卡吸管竟是喝到水银电池了</p>-->
+                <!--</div>-->
+            <!--</li>-->
+        <!--</a>-->
+        <!--<a href="https://www.baidu.com/index.php?tn=78040160_63_pg&ch=2"  >-->
+            <!--<li class="border-top-none">-->
+                <!--<div class="recommend-img-box"><img src="11.jpg" ></div>-->
+                <!--<div class="recommend-text"><p>喝珍珠奶茶卡吸管竟是喝到水银电池了</p>-->
+                <!--</div>-->
+            <!--</li>-->
+        <!--</a>-->
+        <!--<a href="https://www.baidu.com/index.php?tn=78040160_63_pg&ch=2"  >-->
+            <!--<li class="border-top-none">-->
+                <!--<div class="recommend-img-box"><img src="11.jpg" ></div>-->
+                <!--<div class="recommend-text"><p>喝珍珠奶茶卡吸管竟是喝到水银电池了</p>-->
+                <!--</div>-->
+            <!--</li>-->
+        <!--</a>-->
+    </ul>
+</div>
+<!--</div>-->
+
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/underscore/underscore-min.js"></script>
+<script src="js/swipe.js"></script>
+<!--<script type="text/javascript">-->
+    <!--var template =-->
+        <!--'<a href="[hurl]"  >'+-->
+        <!--'<li class="border-top-none">'+-->
+        <!--'<div class="recommend-img-box"><img src="[src]" ></div>'+-->
+        <!--'<div class="recommend-text"><p>[tent]</p>'+-->
+        <!--'</div>'+-->
+        <!--'</li>'+-->
+        <!--'</a>';-->
+
+    <!--function GetQueryString(name) {-->
+        <!--var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");-->
+        <!--var r = window.location.search.substr(1).match(reg);-->
+        <!--if (r != null)return unescape(r[2]);-->
+        <!--return null;-->
+    <!--}-->
+    <!--$(function () {-->
+        <!--var uid = GetQueryString("uid");-->
+        <!--var cid = GetQueryString("cid");-->
+        <!--console.log(uid)-->
+        <!--$.post("http://one2all.mobi/api/app/get_rec_content",{uid:uid,cid:cid},function (r) {-->
+            <!--console.log(r)-->
+            <!--if(r.code == 0){-->
+                <!--var list = r.list;-->
+                <!--console.log(list.length)-->
+                <!--for(var i = 0;i<list.length;i++){-->
+                    <!--var l = list.indexOf(i);-->
+                    <!--var pic = l.pic-->
+                    <!--var title = l.title-->
+                    <!--var b64 = '/s/view_video?mid='+l.id+'&uid='+uid-->
+                    <!--template.replace('[hurl]',b64).replace('[src]',pic).replace('[tent]',title)-->
+                    <!--console.log(template)-->
+                    <!--$(".article-recommend-list").appendChild(template);-->
+                <!--}-->
+            <!--}-->
+        <!--},"json")-->
+    <!--})-->
+
+<!--</script>-->
+</body>
+<script type="text/html" id="tem">
+    {{each list as value i}}
+    <a href="https://www.baidu.com/index.php?tn=78040160_63_pg&ch=2">
+        <li class="border-top-none">
+            <div class="recommend-img-box">
+                <img src={{value.pic}}>
+            </div>
+            <div class="recommend-text">
+                <p>{{value.title}}</p>
+            </div>
+        </li>
+    </a>
+    {{/each}}
+</script>
+
+</html>
+<script type="text/javascript">
+    $(function(){
+        $.ajax({
+            url:'http://one2all.mobi/api/app/get_rec_content?uid=166396',
+//            url:'http://118.190.44.203/api/face/get_video_detail?uid=127013&cid=20',
+            type:'get',
+//            data:{
+//
+//            },
+            dataType:'json',
+            success:function(data){
+                console.log(data);
+                var str = template('tem',data);
+//                console.log(str);
+                $('.article-recommend-list').html(str);
+            }
+        })
+    })
+</script>
+
